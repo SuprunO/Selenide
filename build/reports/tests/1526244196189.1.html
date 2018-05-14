@@ -1,0 +1,534 @@
+<html dir="ltr" lang="en"><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Wedding Stuff Hub</title>
+		<base href="http://weddingstuffhub.com/">
+        <link rel="icon" type="image/png" href="http://weddingstuffhub.com/images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="ext/jquery/ui/redmond/jquery-ui-1.10.4.min.css">
+		<script type="text/javascript" src="ext/jquery/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="ext/jquery/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="ext/jquery/ui/jquery-ui-1.10.4.min.js"></script>
+
+				<script type="text/javascript" src="ext/colorbox/jquery.colorbox-min.js"></script>
+        <script type="text/javascript" src="ext/elevateZoom/jquery.elevatezoom.js"></script>
+        <script type="text/javascript" src="ext/fancybox/jquery.fancybox-1.3.4.js"></script>
+        <script type="text/javascript" src="ext/fancybox/jquery.easing-1.3.pack.js"></script>
+        <script type="text/javascript" src="ext/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+        <script type="text/javascript" src="ext/bxslider/jquery.bxslider.js"></script>
+        <script type="text/javascript" src="ext/totalStorage/total-storage.min.js"></script>
+        <script type="text/javascript" src="ext/jquery/jQuery.equalHeights.min.js"></script>
+        <script type="text/javascript" src="ext/jquery/jquery.uniform/jquery.uniform.min.js"></script>
+        <script type="text/javascript" src="includes/scirpt.js"></script>
+        
+        <!-- Nivo Slider -->
+			<script type="text/javascript" src="ext/jquery/jquery.nivo.slider.js"></script>
+            <link rel="stylesheet" type="text/css" href="css/nivo-slider.css">
+        <!-- Nivo Slider -->
+		<link rel="stylesheet" type="text/css" href="ext/colorbox/colorbox.css">
+        <link rel="stylesheet" type="text/css" href="ext/fancybox/jquery.fancybox-1.3.4.css">
+        <link rel="stylesheet" type="text/css" href="ext/bxslider/jquery.bxslider.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/font/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="css/uniform/uniform.default.css">
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+        <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&amp;subset=latin,cyrillic-ext,latin-ext,cyrillic" rel="stylesheet" type="text/css">
+        		  <script type="text/javascript" src="ext/jquery/superfish/js/jquery.hoverIntent.minified.js"></script>
+          <script type="text/javascript" src="ext/jquery/superfish/js/superfish.js"></script>
+          <script type="text/javascript" src="ext/jquery/stickup/stickup-menu.js"></script>
+          <script type="text/javascript">
+
+			$(document).ready(function(){
+
+
+
+    			$(".menu_btn").click(function() {
+    			  $("#headerShortcuts").slideToggle( "slow", function(){
+  					$("#headerShortcuts").prev().toggleClass("curr", $(this).is(":visible"));
+  					$("#headerShortcuts").stop();
+    			  });
+    			});
+    			$(".search_btn").click(function() {
+    			  $(".headerBoxContainer.search").slideToggle( "slow", function(){
+  					$(".headerBoxContainer.search").prev().toggleClass("curr", $(this).is(":visible"));
+  					$(".headerBoxContainer.search").stop();
+    			  });
+
+
+
+    			});
+
+				var path = window.location.href;
+	
+				if (path !== undefined) {
+					$(".colmn-categories li").has('ul').addClass('hasChild');
+					$(".colmn-categories ul, .sf-menu").find("a[href='" + path + "']").parents('li').addClass('active').children('a').addClass('active');
+					function categoriesToggle(){
+						$(".colmn-categories ul").each(function() {
+                            if($(this).parent().hasClass('active')) {
+								$(this).show().prev('i').addClass('opened');
+							}
+                        });
+						$(".colmn-categories i").on('click',function() {
+                            if($(this).hasClass('opened')) {
+								$(this).next('ul').slideUp(function(){
+									$(this).prev().removeClass('opened').addClass('closed');
+								});	
+							} else {
+								$(this).next('ul').slideDown(function(){
+									$(this).prev().removeClass('closed').addClass('opened');
+								});	
+							}
+                        });
+						$(".colmn-categories i").hover(
+							function(){$(this).prev('a').addClass('hovered')},
+							function(){$(this).prev('a').removeClass('hovered')}
+						);
+					}
+				}
+				$('.sf-menu > li > ul').each(function(){
+					i = 0;
+					//add classes for clearing
+						$(this).find('>li').each(function(){
+							i++;
+							if (i % 5 == 1)
+								$(this).addClass('first-in-line-lg');
+	
+						});
+				});
+				categoriesToggle();
+				
+				var stickMenu = false;
+				var isMenu = $('body').find('#top-menu').html();
+				if(stickMenu && typeof(isMenu) != 'undefined') {
+					$('.sf-menu').tmStickUp();
+				}
+			});
+
+		  </script>
+          <script type="text/javascript">
+		  	productWidth = 3;
+		  </script>
+          <link rel="stylesheet" media="screen" href="css/superfish.css">
+                        			<!-- owl-carousel -->
+        <link href="css/stylesheet_owl.carousel.css" rel="stylesheet">
+        <script type="text/javascript" src="ext/owl-carousel/jscript_owl.carousel.js"></script>
+        <script type="text/javascript">			
+   				$(document).ready(function(){
+   				   $("#owl").owlCarousel({
+   				     items : 4,
+   				     itemsDesktop : [1299, 4],
+   				     itemsTablet: [995, 4],
+   				     itemsTabletSmall: [767, 4],
+   				     itemsMobile : [479, 3],
+   				     lazyLoad : true,
+   				     pagination: true,
+   				     navigation : true,
+   				     addClassActive : true
+   				   });
+           
+   				  });
+   				  $(document).ready(function(){
+   				   $("#owl-1").owlCarousel({
+   				     items : 4,
+   				     itemsDesktop : [1299, 4],
+   				     itemsTablet: [995, 4],
+   				     itemsTabletSmall: [767, 4],
+   				     itemsMobile : [479, 3],
+   				     lazyLoad : true,
+   				     pagination: true,
+   				     navigation : true,
+   				     addClassActive : true
+   				   });
+  				});
+        </script>
+	<script src="https://www-visitor-info.com/static/client.js"></script></head>
+<body class="">
+    	<!--[if lt IE 9]>
+        <div style='clear:both;height:59px;padding:0 15px 0 15px;position:relative;z-index:10000;text-align:center;'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div>
+		<![endif]-->
+<div id="bodyWrapper">
+	
+<div id="header">
+  <div class="header-wrapper">
+    <div class="container">
+            <div class="topRow clearfix">  
+        <div class="search_btn"></div><div class="headerBoxContainer search">    <div class="form-inline"><form class="form-group" name="quick_find" action="http://weddingstuffhub.com/advanced_search_result.php" method="get">    <input class="form-control" name="keywords" size="10" placeholder="Search" maxlength="30" type="text"><input name="search_in_description" value="1" type="hidden"><input name="osCsid" value="l7tr77s5q2guubt7mnqdbvcsg1" type="hidden"><button class="btn btn-default" type="submit"><i class="fa fa-angle-right"></i></button>    </form></div></div>
+<div id="headerShortcutsTop" class="btn-group">    	 <a id="tdb1" class="" href="http://weddingstuffhub.com/account.php?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">My Account</a><a id="tdb2" class="" href="http://weddingstuffhub.com/login.php?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Log In</a></div><div id="headerShortcutsTop_home"><a href="index.php">Home</a>  </div><div id="headerShortcutsTop_lft" class="btn-group">    	 <a id="tdb3" class="" href="http://weddingstuffhub.com/contact_us.php?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Contact Us</a></div>      </div>
+            <div class="row">
+        <div class="col-xs-12">
+          <div id="storeLogo">
+            <a href="http://weddingstuffhub.com/index.php?osCsid=l7tr77s5q2guubt7mnqdbvcsg1"><img src="images/store_logo.png" alt="Wedding Stuff Hub" title="Wedding Stuff Hub"></a>          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg_1">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+                    
+<div class="cart_btn"></div><div class="header-shopping-cart dropdown">  <h3>
+              <a href="http://weddingstuffhub.com/shopping_cart.php?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">
+              <span class="productCount"> 
+              0 <span>items</span></span></a></h3>  <div class="cart-content"><div class="infoBoxContents">0 <span>items</span></div></div></div><script type="text/javascript">
+					$('.dropdown h3 a').on('click', function(){
+						if($('.dropdown .cart-content').is(':hidden')) {
+							$('.dropdown .cart-content').show();	
+							$(this).addClass('active');
+						} else {
+							$('.dropdown .cart-content').hide();
+							$(this).removeClass('active');	
+						}
+						return false;
+					});
+					$(document).on('click', function(e){
+						$('.dropdown .cart-content').hide();
+						$('.dropdown h3 a').removeClass('active');	
+					});
+					$('.dropdown .cart-content').on('click', function(e){
+						e.stopPropagation();
+					});
+				</script>
+<div id="top-menu" class="sf-container clearfix">
+<ul class="sf-menu sf-js-enabled sf-arrows">
+    <li class="first-level">
+      <a href="http://weddingstuffhub.com/index.php/birdcage-veils-c-28?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Birdcage Veils</a>
+    </li>
+    <li class="first-level">
+      <a href="http://weddingstuffhub.com/index.php/bridal-hair-clip-c-29?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Bridal Hair Clip</a>
+    </li>
+    <li class="first-level">
+      <a href="http://weddingstuffhub.com/index.php/bridal-shawls-c-32?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Bridal Shawls</a>
+    </li>
+    <li class="first-level">
+      <a href="http://weddingstuffhub.com/index.php/bridal-head-chains-c-31?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Bridal Head Chains</a>
+    </li>
+    <li class="first-level">
+      <a href="http://weddingstuffhub.com/index.php/bridal-hair-pin-c-30?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Bridal Hair Pin</a>
+    </li>
+  </ul>
+
+						<script type="text/javascript">
+							jQuery(document).ready(function(){
+							  jQuery('ul.sf-menu').superfish({
+								animation: {opacity: 'show'},   // slide-down effect without fade-in
+								delay:     800               // 1.2 second delay on mouseout
+							  });
+							});
+					  </script>
+				</div>
+                    
+		<script type="text/javascript">
+		$(window).load(function() {
+		  $('#slider').nivoSlider ({
+				effect:'random', 
+				slices:15,
+				boxCols: 8,
+				boxRows: 4,				
+				animSpeed:500,
+				pauseTime:5000,
+				startSlide:0, //Set starting Slide (0 index)
+				directionNav:true, //Next & Prev
+				directionNavHide:false, //Only show on hover
+				controlNav:true, //1,2,3...
+				controlNavThumbs:false, //Use thumbnails for Control Nav
+				controlNavThumbsFromRel:false, //Use image rel for thumbs
+				controlNavThumbsSearch: '.jpg', //Replace this with...
+				controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
+				keyboardNav:true, //Use left & right arrows
+				pauseOnHover:true, //Stop animation while hovering
+				manualAdvance:false, //Force manual transitions
+				captionOpacity:0.8, //Universal caption opacity
+				beforeChange: function(){},
+				afterChange: function(){},
+				slideshowEnd: function(){}, //Triggers after all slides have been shown
+				prevText: '',
+				nextText: ''
+			});
+		});
+
+		</script>
+	   	<div class="nivoSlider_wrapper"><div id="slider" class="nivoSlider" style="width:1140px; height:450px;"><a href="http://weddingstuffhub.com/redirect.php?action=banner&amp;goto=2&amp;osCsid=l7tr77s5q2guubt7mnqdbvcsg1" target="_blank" class="nivo-imageLink" style="display: block;"><img src="images/slide-1.jpg" alt="<div class=&quot;caption&quot;></div>" title="<div class=&quot;caption&quot;></div>" style="display: none;"></a><a href="http://weddingstuffhub.com/redirect.php?action=banner&amp;goto=3&amp;osCsid=l7tr77s5q2guubt7mnqdbvcsg1" target="_blank" class="nivo-imageLink" style="display: none;"><img src="images/slide-2.jpg" alt="<div class=&quot;caption&quot;></div>" title="<div class=&quot;caption&quot;></div>" style="display: none;"></a><a href="http://weddingstuffhub.com/redirect.php?action=banner&amp;goto=4&amp;osCsid=l7tr77s5q2guubt7mnqdbvcsg1" target="_blank" class="nivo-imageLink" style="display: none;"><img src="images/slide-3.jpg" alt="<div class=&quot;caption&quot;></div>" title="<div class=&quot;caption&quot;></div>" style="display: none;"></a><img class="nivo-main-image" src="images/slide-1.jpg" style="display: inline;"><div class="nivo-caption" style="display: block;"><div class="caption"></div></div><div class="nivo-directionNav"><a class="nivo-prevNav"></a><a class="nivo-nextNav"></a></div></div><div class="nivo-controlNav"><a class="nivo-control active" rel="0">1</a><a class="nivo-control" rel="1">2</a><a class="nivo-control" rel="2">3</a></div></div> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <div class="content-wrapper">
+	<div id="bodyContent">
+  		<div class="container">
+  		<div class="row">
+	        
+		
+    			<div id="centerColumn" class="col-xs-12"><!-- <div class="welcome-block">
+  <h1 class="page-heading"></h1>
+  <p class="customerGreeting">  </p>
+</div> -->
+
+ <!-- <h2 class="page-heading">New Products For May</h2>-->
+
+  	<!--<div class="block-content home_new">
+    	<ul id="owl" class="row product-listing grid owl-carousel"><li class="col-xs-3 first-in-line"><div class="product-container"><div class="product-image-box">	<a class="product-image" href="http://weddingstuffhub.com/product_info.php/crystal-imitation-pearl-headbands-head-chain-p-99?osCsid=l7tr77s5q2guubt7mnqdbvcsg1"><img  src="images/jlbrhp1504863523806.jpg" alt="Crystal Imitation Pearl Headbands Head Chain" title="Crystal Imitation Pearl Headbands Head Chain" width="250" height="250" /></a></div><div class="product-content-wrap"><div class="product-content"><a class="product-name listing" href="http://weddingstuffhub.com/product_info.php/crystal-imitation-pearl-headbands-head-chain-p-99?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Crystal Imitation Pearl Headbands Head Chain</a><div class="info-price product-info-row"><span class="info-text">Price:</span><span class="product-price"><span class="new-price price">$122</span> <del class="old-price price">$132</del></span></div><div class="product-description description-grid">Specifications
+
+
+	
+		
+			Category
+			Hair Tool,&nbsp;Head Chain,&nbsp;Headbands
+		
+		
+			Material
+			Imitation Pearl,&nbsp;Crystal
+		
+		
+			Occasion
+			Party/ Evening,&nbsp;Wedding
+		
+...</div></div><div class="button-container"><a id="tdb4" class="cart btn btn-primary" href="http://weddingstuffhub.com/index.php?action=buy_now&amp;products_id=99&amp;osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Add to Cart</a> <a id="tdb5" class="info btn btn-default" href="http://weddingstuffhub.com/product_info.php/crystal-imitation-pearl-headbands-head-chain-p-99?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">View</a></div></div>	</div></li><li class="col-xs-3"><div class="product-container"><div class="product-image-box">	<a class="product-image" href="http://weddingstuffhub.com/product_info.php/product-p-10?osCsid=l7tr77s5q2guubt7mnqdbvcsg1"><img  src="images/annbpn1509359359092.jpg" alt="Flax Net Fascinators Birdcage Veil" title="Flax Net Fascinators Birdcage Veil" width="250" height="250" /></a></div><div class="product-content-wrap"><div class="product-content"><a class="product-name listing" href="http://weddingstuffhub.com/product_info.php/product-p-10?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Flax Net Fascinators Birdcage Veil</a><div class="info-price product-info-row"><span class="info-text">Price:</span><span class="product-price"><span class="price">$125</span></span></div><div class="product-description description-grid">Specifications
+
+
+	
+		
+			Category
+			Birdcage Veils,&nbsp;Fascinators
+		
+		
+			Material
+			Flax,&nbsp;Net
+		
+		
+			Occasion
+			Wedding,&nbsp;Party/ Evening
+		
+		
+			Head Circumference...</div></div><div class="button-container"><a id="tdb6" class="cart btn btn-primary" href="http://weddingstuffhub.com/index.php?action=buy_now&amp;products_id=10&amp;osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Add to Cart</a> <a id="tdb7" class="info btn btn-default" href="http://weddingstuffhub.com/product_info.php/product-p-10?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">View</a></div></div>	</div></li><li class="col-xs-3"><div class="product-container"><div class="product-image-box">	<a class="product-image" href="http://weddingstuffhub.com/product_info.php/product-p-18?osCsid=l7tr77s5q2guubt7mnqdbvcsg1"><img  src="images/oqmlby1493972158314.jpg" alt="Tulle Chiffon Headbands Birdcage Veil" title="Tulle Chiffon Headbands Birdcage Veil" width="250" height="250" /></a></div><div class="product-content-wrap"><div class="product-content"><a class="product-name listing" href="http://weddingstuffhub.com/product_info.php/product-p-18?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Tulle Chiffon Headbands Birdcage Veil</a><div class="info-price product-info-row"><span class="info-text">Price:</span><span class="product-price"><span class="price">$101</span></span></div><div class="product-description description-grid">Specifications
+
+
+	
+		
+			Category
+			Birdcage Veils,&nbsp;Headbands
+		
+		
+			Material
+			Chiffon,&nbsp;Tulle
+		
+		
+			Occasion
+			Wedding,&nbsp;Office &amp; Career,&nbsp;Special Occasion...</div></div><div class="button-container"><a id="tdb8" class="cart btn btn-primary" href="http://weddingstuffhub.com/index.php?action=buy_now&amp;products_id=18&amp;osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Add to Cart</a> <a id="tdb9" class="info btn btn-default" href="http://weddingstuffhub.com/product_info.php/product-p-18?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">View</a></div></div>	</div></li><li class="col-xs-3"><div class="product-container"><div class="product-image-box">	<a class="product-image" href="http://weddingstuffhub.com/product_info.php/product-p-26?osCsid=l7tr77s5q2guubt7mnqdbvcsg1"><img  src="images/kkdzjs1495869113821.jpg" alt="Flax Feather Net Fascinator Birdcage Veil" title="Flax Feather Net Fascinator Birdcage Veil" width="250" height="250" /></a></div><div class="product-content-wrap"><div class="product-content"><a class="product-name listing" href="http://weddingstuffhub.com/product_info.php/product-p-26?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Flax Feather Net Fascinator Birdcage Veil</a><div class="info-price product-info-row"><span class="info-text">Price:</span><span class="product-price"><span class="price">$111</span></span></div><div class="product-description description-grid">Specifications
+
+
+	
+		
+			Category
+			Birdcage Veils,&nbsp;Fascinators
+		
+		
+			Material
+			Feather,&nbsp;Net,&nbsp;Flax
+		
+		
+			Occasion
+			Special Occasion,&nbsp;Wedding
+		
+		
+			Ma...</div></div><div class="button-container"><a id="tdb10" class="cart btn btn-primary" href="http://weddingstuffhub.com/index.php?action=buy_now&amp;products_id=26&amp;osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Add to Cart</a> <a id="tdb11" class="info btn btn-default" href="http://weddingstuffhub.com/product_info.php/product-p-26?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">View</a></div></div>	</div></li><li class="col-xs-3 first-in-line"><div class="product-container"><div class="product-image-box">	<a class="product-image" href="http://weddingstuffhub.com/product_info.php/alloy-hair-comb-flower-hair-clip-p-34?osCsid=l7tr77s5q2guubt7mnqdbvcsg1"><img  src="images/dporhf1504083993111.jpg" alt="Alloy Hair Comb Flower Hair Clip" title="Alloy Hair Comb Flower Hair Clip" width="250" height="250" /></a></div><div class="product-content-wrap"><div class="product-content"><a class="product-name listing" href="http://weddingstuffhub.com/product_info.php/alloy-hair-comb-flower-hair-clip-p-34?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Alloy Hair Comb Flower Hair Clip</a><div class="info-price product-info-row"><span class="info-text">Price:</span><span class="product-price"><span class="price">$100</span></span></div><div class="product-description description-grid">SpecificationsCategoryFlowers,&nbsp;Hair Combs,&nbsp;Hair Stick,&nbsp;Hair Pin,&nbsp;Hair ClipMaterialRhinestone,&nbsp;Alloy,&nbsp;CrystalOccasionWeddingMaterial Shown ColorGold,&nbsp;Green,&nbsp;Blue...</div></div><div class="button-container"><a id="tdb12" class="cart btn btn-primary" href="http://weddingstuffhub.com/index.php?action=buy_now&amp;products_id=34&amp;osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Add to Cart</a> <a id="tdb13" class="info btn btn-default" href="http://weddingstuffhub.com/product_info.php/alloy-hair-comb-flower-hair-clip-p-34?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">View</a></div></div>	</div></li><li class="col-xs-3"><div class="product-container"><div class="product-image-box">	<a class="product-image" href="http://weddingstuffhub.com/product_info.php/tiara-headband-wreath-hair-clip-p-42?osCsid=l7tr77s5q2guubt7mnqdbvcsg1"><img  src="images/lbpnyi1480926766897.jpg" alt="Tiara Headband Wreath Hair Clip" title="Tiara Headband Wreath Hair Clip" width="250" height="250" /></a></div><div class="product-content-wrap"><div class="product-content"><a class="product-name listing" href="http://weddingstuffhub.com/product_info.php/tiara-headband-wreath-hair-clip-p-42?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Tiara Headband Wreath Hair Clip</a><div class="info-price product-info-row"><span class="info-text">Price:</span><span class="product-price"><span class="price">$108</span></span></div><div class="product-description description-grid">Specifications
+
+
+	
+		
+			Gender
+			Women
+		
+		
+			Category
+			Tiaras,&nbsp;Hair Tool,&nbsp;Hair Clip,&nbsp;Wreaths,&nbsp;Headbands
+		
+		
+			Material
+			Alloy,&nbsp;Rhinestone
+		
+		
+		...</div></div><div class="button-container"><a id="tdb14" class="cart btn btn-primary" href="http://weddingstuffhub.com/index.php?action=buy_now&amp;products_id=42&amp;osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Add to Cart</a> <a id="tdb15" class="info btn btn-default" href="http://weddingstuffhub.com/product_info.php/tiara-headband-wreath-hair-clip-p-42?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">View</a></div></div>	</div></li><li class="col-xs-3"><div class="product-container"><div class="product-image-box">	<a class="product-image" href="http://weddingstuffhub.com/product_info.php/tulle-chiffon-fabric-silk-net-flowers-hair-clip-p-50?osCsid=l7tr77s5q2guubt7mnqdbvcsg1"><img  src="images/mhcwxx1501669566847.jpg" alt="Tulle Chiffon Fabric Silk Net Flowers Hair Clip" title="Tulle Chiffon Fabric Silk Net Flowers Hair Clip" width="250" height="250" /></a></div><div class="product-content-wrap"><div class="product-content"><a class="product-name listing" href="http://weddingstuffhub.com/product_info.php/tulle-chiffon-fabric-silk-net-flowers-hair-clip-p-50?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Tulle Chiffon Fabric Silk Net Flowers Hair Clip</a><div class="info-price product-info-row"><span class="info-text">Price:</span><span class="product-price"><span class="price">$109</span></span></div><div class="product-description description-grid">SpecificationsCategoryHair Clip,&nbsp;FlowersMaterialSilk,&nbsp;Fabric,&nbsp;Net,&nbsp;Chiffon,&nbsp;TulleOccasionBirthday,&nbsp;Wedding,&nbsp;Party/ Evening,&nbsp;Special OccasionMaterial Shown Color...</div></div><div class="button-container"><a id="tdb16" class="cart btn btn-primary" href="http://weddingstuffhub.com/index.php?action=buy_now&amp;products_id=50&amp;osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Add to Cart</a> <a id="tdb17" class="info btn btn-default" href="http://weddingstuffhub.com/product_info.php/tulle-chiffon-fabric-silk-net-flowers-hair-clip-p-50?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">View</a></div></div>	</div></li><li class="col-xs-3"><div class="product-container"><div class="product-image-box">	<a class="product-image" href="http://weddingstuffhub.com/product_info.php/imitation-pearl-rhinestone-alloy-headband-p-58?osCsid=l7tr77s5q2guubt7mnqdbvcsg1"><img  src="images/lxtorl1493111392491.jpg" alt="Imitation Pearl Rhinestone Alloy Headband" title="Imitation Pearl Rhinestone Alloy Headband" width="250" height="250" /></a></div><div class="product-content-wrap"><div class="product-content"><a class="product-name listing" href="http://weddingstuffhub.com/product_info.php/imitation-pearl-rhinestone-alloy-headband-p-58?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Imitation Pearl Rhinestone Alloy Headband</a><div class="info-price product-info-row"><span class="info-text">Price:</span><span class="product-price"><span class="price">$156</span></span></div><div class="product-description description-grid">Specifications
+
+
+	
+		
+			Category
+			Tiara, Hair Pin, Headband
+		
+		
+			Material
+			Rhinestone, Imitation Pearl, Alloy
+		
+		
+			Occasion
+			Special Occasion, Wedding
+		
+		
+			Material...</div></div><div class="button-container"><a id="tdb18" class="cart btn btn-primary" href="http://weddingstuffhub.com/index.php?action=buy_now&amp;products_id=58&amp;osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Add to Cart</a> <a id="tdb19" class="info btn btn-default" href="http://weddingstuffhub.com/product_info.php/imitation-pearl-rhinestone-alloy-headband-p-58?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">View</a></div></div>	</div></li></ul>  	</div>-->
+<!-- featured_products //-->
+<h2 class="page-heading">Featured Products</h2><div class="block-content home_feat"><ul id="owl-1" class="product-listing grid owl-carousel owl-theme" style="opacity: 1; display: block;"><div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 4528px; left: 0px; display: block;"><div class="owl-item active" style="width: 283px;"><li class="col-xs-3 first-in-line"><div class="product-container"><div class="product-image-box">	<a class="product-image" href="http://weddingstuffhub.com/product_info.php/product-p-20?osCsid=l7tr77s5q2guubt7mnqdbvcsg1"><img src="images/iwwgbm1470649641985.jpg" alt="Tulle Net Fascinator Birdcage Veil" title="Tulle Net Fascinator Birdcage Veil" width="250" height="250"></a></div><div class="product-content-wrap"><div class="product-content"><a class="product-name listing" href="http://weddingstuffhub.com/product_info.php/product-p-20?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Tulle Net Fascinator Birdcage Veil</a><div class="info-price product-info-row"><span class="info-text">Price:</span><span class="product-price"><span class="price">$145</span></span></div><div class="product-description description-grid">Specifications
+
+
+	
+		
+			Gender
+			Women
+		
+		
+			Category
+			Birdcage Veils,&nbsp;Fascinators
+		
+		
+			Material
+			Net,&nbsp;Tulle
+		
+		
+			Occasion
+			Special Occasion,&nbsp;Weddin...</div></div><div class="button-container"><a id="tdb20" class="cart btn btn-primary" href="http://weddingstuffhub.com/index.php?action=buy_now&amp;products_id=20&amp;osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Add to Cart</a> <a id="tdb21" class="info btn btn-default" href="http://weddingstuffhub.com/product_info.php/product-p-20?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">View</a></div></div>	</div></li></div><div class="owl-item active" style="width: 283px;"><li class="col-xs-3"><div class="product-container"><div class="product-image-box">	<a class="product-image" href="http://weddingstuffhub.com/product_info.php/pearl-rhinestone-flowers-head-chain-p-86?osCsid=l7tr77s5q2guubt7mnqdbvcsg1"><img src="images/zwfznk1509160927531.jpg" alt="Pearl Rhinestone Flowers Head Chain" title="Pearl Rhinestone Flowers Head Chain" width="250" height="250"></a></div><div class="product-content-wrap"><div class="product-content"><a class="product-name listing" href="http://weddingstuffhub.com/product_info.php/pearl-rhinestone-flowers-head-chain-p-86?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Pearl Rhinestone Flowers Head Chain</a><div class="info-price product-info-row"><span class="info-text">Price:</span><span class="product-price"><span class="price">$77</span></span></div><div class="product-description description-grid">Specifications
+
+
+	
+		
+			Category
+			Head Chain,&nbsp;Flowers
+		
+		
+			Material
+			Rhinestone,&nbsp;Imitation Pearl
+		
+		
+			Occasion
+			Wedding,&nbsp;Special Occasion
+		
+		
+			Materi...</div></div><div class="button-container"><a id="tdb22" class="cart btn btn-primary" href="http://weddingstuffhub.com/index.php?action=buy_now&amp;products_id=86&amp;osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Add to Cart</a> <a id="tdb23" class="info btn btn-default" href="http://weddingstuffhub.com/product_info.php/pearl-rhinestone-flowers-head-chain-p-86?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">View</a></div></div>	</div></li></div><div class="owl-item active" style="width: 283px;"><li class="col-xs-3"><div class="product-container"><div class="product-image-box">	<a class="product-image" href="http://weddingstuffhub.com/product_info.php/pearl-alloy-headband-hair-pin-p-59?osCsid=l7tr77s5q2guubt7mnqdbvcsg1"><img src="images/xkfajw1493111399194.jpg" alt="Pearl Alloy Headband Hair Pin" title="Pearl Alloy Headband Hair Pin" width="250" height="250"></a></div><div class="product-content-wrap"><div class="product-content"><a class="product-name listing" href="http://weddingstuffhub.com/product_info.php/pearl-alloy-headband-hair-pin-p-59?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Pearl Alloy Headband Hair Pin</a><div class="info-price product-info-row"><span class="info-text">Price:</span><span class="product-price"><span class="price">$84</span></span></div><div class="product-description description-grid">Specifications
+
+
+	
+		
+			Category
+			Hair Pin, Headband
+		
+		
+			Material
+			Imitation Pearl, Alloy
+		
+		
+			Occasion
+			Special Occasion, Wedding
+		
+		
+			Material Shown Color
+			Pi...</div></div><div class="button-container"><a id="tdb24" class="cart btn btn-primary" href="http://weddingstuffhub.com/index.php?action=buy_now&amp;products_id=59&amp;osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Add to Cart</a> <a id="tdb25" class="info btn btn-default" href="http://weddingstuffhub.com/product_info.php/pearl-alloy-headband-hair-pin-p-59?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">View</a></div></div>	</div></li></div><div class="owl-item active" style="width: 283px;"><li class="col-xs-3"><div class="product-container"><div class="product-image-box">	<a class="product-image" href="http://weddingstuffhub.com/product_info.php/product-p-17?osCsid=l7tr77s5q2guubt7mnqdbvcsg1"><img src="images/htqh1499822035527.jpg" alt="Fabric Net Fascinator Hat Birdcage Veil" title="Fabric Net Fascinator Hat Birdcage Veil" width="250" height="250"></a></div><div class="product-content-wrap"><div class="product-content"><a class="product-name listing" href="http://weddingstuffhub.com/product_info.php/product-p-17?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Fabric Net Fascinator Hat Birdcage Veil</a><div class="info-price product-info-row"><span class="info-text">Price:</span><span class="product-price"><span class="price">$100</span></span></div><div class="product-description description-grid">Specifications
+
+
+	
+		
+			Category
+			Birdcage Veils,&nbsp;Hats,&nbsp;Fascinators
+		
+		
+			Material
+			Net,&nbsp;Fabric
+		
+		
+			Occasion
+			Special Occasion,&nbsp;Wedding
+		
+		
+			Mat...</div></div><div class="button-container"><a id="tdb26" class="cart btn btn-primary" href="http://weddingstuffhub.com/index.php?action=buy_now&amp;products_id=17&amp;osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Add to Cart</a> <a id="tdb27" class="info btn btn-default" href="http://weddingstuffhub.com/product_info.php/product-p-17?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">View</a></div></div>	</div></li></div><div class="owl-item" style="width: 283px;"><li class="col-xs-3 first-in-line"><div class="product-container"><div class="product-image-box">	<a class="product-image" href="http://weddingstuffhub.com/product_info.php/polyester-alloy-hair-clip-p-48?osCsid=l7tr77s5q2guubt7mnqdbvcsg1"><img src="images/zmrrpv1506407109165.jpg" alt="Polyester Alloy Hair Clip" title="Polyester Alloy Hair Clip" width="250" height="250"></a></div><div class="product-content-wrap"><div class="product-content"><a class="product-name listing" href="http://weddingstuffhub.com/product_info.php/polyester-alloy-hair-clip-p-48?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Polyester Alloy Hair Clip</a><div class="info-price product-info-row"><span class="info-text">Price:</span><span class="product-price"><span class="price">$107</span></span></div><div class="product-description description-grid">SpecificationsCategoryHair ClipMaterialPolyester,&nbsp;AlloyOccasionThank You,&nbsp;WeddingMaterial Shown ColorRed,&nbsp;WhiteGemstone ColorWhiteHead Circumference (cm)15Shipping Weight(kg)0.4Width (C...</div></div><div class="button-container"><a id="tdb28" class="cart btn btn-primary" href="http://weddingstuffhub.com/index.php?action=buy_now&amp;products_id=48&amp;osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Add to Cart</a> <a id="tdb29" class="info btn btn-default" href="http://weddingstuffhub.com/product_info.php/polyester-alloy-hair-clip-p-48?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">View</a></div></div>	</div></li></div><div class="owl-item" style="width: 283px;"><li class="col-xs-3"><div class="product-container"><div class="product-image-box">	<a class="product-image" href="http://weddingstuffhub.com/product_info.php/product-p-8?osCsid=l7tr77s5q2guubt7mnqdbvcsg1"><img src="images/zpjwrs1483502471063.jpg" alt="Silk Net Headband Flower Birdcage Veil" title="Silk Net Headband Flower Birdcage Veil" width="250" height="250"></a></div><div class="product-content-wrap"><div class="product-content"><a class="product-name listing" href="http://weddingstuffhub.com/product_info.php/product-p-8?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Silk Net Headband Flower Birdcage Veil</a><div class="info-price product-info-row"><span class="info-text">Price:</span><span class="product-price"><span class="price">$123</span></span></div><div class="product-description description-grid">Specifications
+
+
+	
+		
+			Gender
+			Women
+		
+		
+			Category
+			Birdcage Veils,&nbsp;Flowers,&nbsp;Headbands
+		
+		
+			Material
+			Rhinestone,&nbsp;Net,&nbsp;Silk
+		
+		
+			Occasion
+			S...</div></div><div class="button-container"><a id="tdb30" class="cart btn btn-primary" href="http://weddingstuffhub.com/index.php?action=buy_now&amp;products_id=8&amp;osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Add to Cart</a> <a id="tdb31" class="info btn btn-default" href="http://weddingstuffhub.com/product_info.php/product-p-8?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">View</a></div></div>	</div></li></div><div class="owl-item" style="width: 283px;"><li class="col-xs-3"><div class="product-container"><div class="product-image-box">	<a class="product-image" href="http://weddingstuffhub.com/product_info.php/feather-wedding-fur-wrap-shawl-p-118?osCsid=l7tr77s5q2guubt7mnqdbvcsg1"><img src="images/gqkmyz1325758970963.jpg" alt="Feather Wedding Fur Wrap Shawl" title="Feather Wedding Fur Wrap Shawl" width="250" height="250"></a></div><div class="product-content-wrap"><div class="product-content"><a class="product-name listing" href="http://weddingstuffhub.com/product_info.php/feather-wedding-fur-wrap-shawl-p-118?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Feather Wedding Fur Wrap Shawl</a><div class="info-price product-info-row"><span class="info-text">Price:</span><span class="product-price"><span class="price">$70</span></span></div><div class="product-description description-grid">SpecificationsCategoryFur Wraps,&nbsp;Wedding WrapsStyleShawlsOccasionWeddingFabricFeather/FurFront DetailsClaspTipsColor &amp; Style representation may vary by monitorAvailable Width26cm</div></div><div class="button-container"><a id="tdb32" class="cart btn btn-primary" href="http://weddingstuffhub.com/index.php?action=buy_now&amp;products_id=118&amp;osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Add to Cart</a> <a id="tdb33" class="info btn btn-default" href="http://weddingstuffhub.com/product_info.php/feather-wedding-fur-wrap-shawl-p-118?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">View</a></div></div>	</div></li></div><div class="owl-item" style="width: 283px;"><li class="col-xs-3"><div class="product-container"><div class="product-image-box">	<a class="product-image" href="http://weddingstuffhub.com/product_info.php/alloy-headbands-hair-pin-headpiece-p-78?osCsid=l7tr77s5q2guubt7mnqdbvcsg1"><img src="images/riwoki1494922869227.jpg" alt="Alloy Headbands Hair Pin Headpiece" title="Alloy Headbands Hair Pin Headpiece" width="250" height="250"></a></div><div class="product-content-wrap"><div class="product-content"><a class="product-name listing" href="http://weddingstuffhub.com/product_info.php/alloy-headbands-hair-pin-headpiece-p-78?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Alloy Headbands Hair Pin Headpiece</a><div class="info-price product-info-row"><span class="info-text">Price:</span><span class="product-price"><span class="price">$101</span></span></div><div class="product-description description-grid">Specifications
+
+
+	
+		
+			Category
+			Hair Pin,&nbsp;Headband,&nbsp;Tiara
+		
+		
+			Material
+			Rhinestone,&nbsp;Alloy
+		
+		
+			Occasion
+			Wedding,&nbsp;Outdoor,&nbsp;Special Occasion
+		...</div></div><div class="button-container"><a id="tdb34" class="cart btn btn-primary" href="http://weddingstuffhub.com/index.php?action=buy_now&amp;products_id=78&amp;osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Add to Cart</a> <a id="tdb35" class="info btn btn-default" href="http://weddingstuffhub.com/product_info.php/alloy-headbands-hair-pin-headpiece-p-78?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">View</a></div></div>	</div></li></div></div></div><div class="owl-controls clickable"><div class="owl-pagination"><div class="owl-page active"><span class=""></span></div><div class="owl-page"><span class=""></span></div></div><div class="owl-buttons"><div class="owl-prev"></div><div class="owl-next"></div></div></div></ul></div><!-- featured_products_eof //-->
+</div>
+<!-- bodyContent //-->
+</div>
+
+<!-- container -->
+</div>
+</div>
+<!-- content-wrapper -->
+
+<div class="footer-wrapper">
+        	<div class="container">
+	            <div class="row">
+  
+<div class="container">
+  <div class="footer">
+        <div class="footer-boxes">
+      <div class="row"><div class="footer-box col-xs-2">	<h4><b>Information</b></h4>	<ul>			<li><a href="http://weddingstuffhub.com/delivery.php?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Delivery Information</a></li>			<li><a href="http://weddingstuffhub.com/conditions.php?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Terms &amp; Conditions</a></li>   <li><a href="http://weddingstuffhub.com/privacy.php?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Privacy Policy</a></li>	</ul></div><div class="footer-box col-xs-2">	<h4>Our offers</h4>	<ul>			<li><a href="http://weddingstuffhub.com/products_new.php?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">New products</a></li>			<li><a href="http://weddingstuffhub.com/specials.php?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Specials</a></li>   <li><a href="http://weddingstuffhub.com/topsellers_products.php?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Top sellers</a></li>	</ul></div>
+<div class="footer-box col-xs-2">	<h4>Your Account</h4>	<ul class="info_account">   <li><a href="http://weddingstuffhub.com/create_account.php?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Create an Account</a></li>   <li><a href="http://weddingstuffhub.com/login.php?osCsid=l7tr77s5q2guubt7mnqdbvcsg1">Log in</a></li>	</ul></div>
+
+<div class="footer-box col-xs-3 tar">	<h4>Company Info</h4><a><img src="images/company.png" alt="Wedding Stuff Hub" title="Wedding Stuff Hub"></a></div>
+      <div class="footer-box col-xs-3 tar">
+        <h4>Contact us</h4>
+        <img src="images/contact.png"> </div>
+    </div>
+        
+   </div>
+   <div class="bottom_footer">
+      <div class="">
+        <div class="row">
+          <div class="col-sm-6 copyright">
+            <p> <img src="images/copyright.png"></p>
+          </div>
+          <div class="col-sm-6 cc_card">
+            <p class="pull-right"> <img src="images/creditcard.png"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<style type="text/css">
+
+.bottom_footer .container {
+    margin: 0 auto;
+    width: 100% !important;
+}
+.footer-wrapper .footer-boxes {
+    border-bottom: 2px solid #c9282d;
+}
+.bottom_footer .row {
+    padding-top: 20px;
+}
+
+</style>				</div>
+			</div>
+<!-- bodyWrapper //--> 
+
+<script language="javascript">var uu=new uutest();uu.init(function(data){return;});</script></div></div></div></div><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>

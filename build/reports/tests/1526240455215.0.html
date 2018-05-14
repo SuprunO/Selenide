@@ -1,0 +1,446 @@
+<html dir="ltr" lang="en"><!--<![endif]--><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<base href="http://weddingdev.com/">
+<meta name="description" content="WeddingDev">
+<script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
+<link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css">
+<link href="catalog/view/theme/simplica/stylesheet/stylesheet.css" rel="stylesheet">
+<script src="catalog/view/javascript/common.js" type="text/javascript"></script>
+</head>
+<body class="checkout-creditcard">
+<nav id="top">
+  <div class="container" id="col-sm-1"> <!--<div class="pull-left">
+<form action="http://weddingdev.com/index.php?route=common/currency/currency" method="post" enctype="multipart/form-data" id="form-currency">
+  <div class="btn-group">
+    <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                            <strong>$</strong>
+            <span class="hidden-xs hidden-sm hidden-md">Currency</span> <i class="fa fa-caret-down"></i></button>
+    <ul class="dropdown-menu">
+                  <li><button class="currency-select btn btn-link btn-block" type="button" name="EUR">€ Euro</button></li>
+                        <li><button class="currency-select btn btn-link btn-block" type="button" name="GBP">£ Pound Sterling</button></li>
+                        <li><button class="currency-select btn btn-link btn-block" type="button" name="USD">$ US Dollar</button></li>
+                </ul>
+  </div>
+  <input type="hidden" name="code" value="" />
+  <input type="hidden" name="redirect" value="http://weddingdev.com/index.php?route=checkout/creditcard" />
+</form>
+</div>
+ -->
+    
+    <div id="top-links" class="nav pull-right login_class">
+      <ul class="list-inline">
+        <li><a href="http://weddingdev.com/index.php?route=account/login">Login</a></li>
+        <li><div class="cart_div" id="col-sm-3"><div id="cart" class="btn-group">
+  <button type="button" data-toggle="dropdown" data-loading-text="Loading..." class="btn btn-inverse btn-block btn-lg dropdown-toggle"><i class="fa fa-shopping-cart"></i> <span id="cart-total">1 item(s) - $131</span></button>
+  <ul class="dropdown-menu pull-right">
+        <li>
+      <table class="table table-striped" id="table-sm-1">
+                <tbody><tr id="tr-sm-1">
+          <td class="text-center" id="td-sm-1">            <a href="http://weddingdev.com/index.php?route=product/product&amp;product_id=86"><img src="http://weddingdev.com/image/cache/catalog/Wedding%20dress/a48-47x47.jpg" alt="Cheap Wedding Dresses Sweetheart" title="Cheap Wedding Dresses Sweetheart" class="img-thumbnail"></a>
+            </td>
+          <td class="text-left" id="td-sm-2"><a href="http://weddingdev.com/index.php?route=product/product&amp;product_id=86">Cheap Wedding Dresses Sweetheart</a>
+                                    <br>
+            - <small>color white</small>
+                        <br>
+            - <small>Size US2</small>
+                                    </td>
+          <td class="text-right" id="td-sm-3">x 1</td>
+          <td class="text-right" id="td-sm-4">$116</td>
+          <td class="text-center" id="td-sm-5"><button type="button" onclick="cart.remove('187');" title="Remove" class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button></td>
+        </tr>
+                      </tbody></table>
+    </li>
+    <li>
+      <div id="top-links">
+        <table class="table table-bordered" id="table-sm-2">
+                    <tbody><tr id="tr-sm-2">
+            <td class="text-right" id="td-sm-6"><strong>Sub-Total</strong></td>
+            <td class="text-right" id="td-sm-7">$116</td>
+          </tr>
+                    <tr id="tr-sm-3">
+            <td class="text-right" id="td-sm-8"><strong>Flat Shipping Rate</strong></td>
+            <td class="text-right" id="td-sm-9">$15</td>
+          </tr>
+                    <tr id="tr-sm-4">
+            <td class="text-right" id="td-sm-10"><strong>Total</strong></td>
+            <td class="text-right" id="td-sm-11">$131</td>
+          </tr>
+                  </tbody></table>
+        <p class="text-right"><a href="http://weddingdev.com/index.php?route=checkout/cart"><strong><i class="fa fa-shopping-cart"></i> View Cart</strong></a>&nbsp;&nbsp;&nbsp;<a href="http://weddingdev.com/index.php?route=checkout/checkout"><strong><i class="fa fa-share"></i> Checkout</strong></a></p>
+      </div>
+    </li>
+      </ul>
+</div>
+</div></li>
+      </ul>
+    </div>
+    <div id="top-links" class="nav pull-left">
+      <ul class="list-inline">
+        <!--<li><a href="http://weddingdev.com/index.php?route=information/contact"><i class="fa fa-phone"></i></a> <span class="hidden-xs hidden-sm hidden-md">000000000</span></li>
+        <li><a href="http://weddingdev.com/index.php?route=account/wishlist" id="wishlist-total" title="Wish List (0)"><i class="fa fa-heart"></i> <span class="hidden-xs hidden-sm hidden-md">Wish List (0)</span></a></li>
+        <li><a href="http://weddingdev.com/index.php?route=checkout/cart" title="Shopping Cart"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Shopping Cart</span></a></li>
+        <!--<li><a href="http://weddingdev.com/index.php?route=checkout/checkout" title="Checkout"><i class="fa fa-share"></i> <span class="hidden-xs hidden-sm hidden-md">Checkout</span></a></li>
+        <li class="dropdown"><a href="http://weddingdev.com/index.php?route=account/account" title="My Account" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md">My Account</span> <span class="caret"></span></a>
+          <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="http://weddingdev.com/index.php?route=account/account">My Account</a></li>
+            <li><a href="http://weddingdev.com/index.php?route=account/order">Order History</a></li>
+            <li><a href="http://weddingdev.com/index.php?route=account/transaction">Transactions</a></li>
+            <li><a href="http://weddingdev.com/index.php?route=account/download">Downloads</a></li>
+            <li><a href="http://weddingdev.com/index.php?route=account/logout">Logout</a></li>
+                      </ul>
+        </li>-->
+        <li><a href="index.php">Home</a></li>
+        <li><a href="index.php?route=information/contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header>
+  <div class="container" id="col-sm-7">
+    <div class="row" id="col-sm-8">
+      <div class="col-sm-4" id="logo">
+        <div id="logo">
+                    <h1><a href="http://weddingdev.com/index.php?route=common/home">Afro Urban Fusion Online Store</a></h1>
+                  </div>
+      </div>
+      <div class="col-md-8 col-sm-5" id="col-sm-11"><div id="search" class="input-group col-sm-5 pull-right">
+  <input name="search" value="" placeholder="Search" class="form-control input-lg" type="text">
+  <span class="input-group-btn">
+    <button type="button" class="btn btn-default btn-lg"><i class="fa fa-search"></i></button>
+  </span>
+</div> </div>
+      
+    </div>
+  </div>
+</header>
+<div class="container" id="col-sm-13">
+  <nav id="menu" class="navbar">
+    <div class="navbar-header" id="col-sm-14"><span id="category" class="visible-xs">Categories</span>
+      <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+    </div>
+    <div class="collapse navbar-collapse navbar-ex1-collapse" id="col-sm-15">
+      <ul class="nav navbar-nav">
+       <!-- <li class="hidden-xs"><a href="http://weddingdev.com/index.php?route=common/home">Home</a></li>-->
+                        <li><a href="http://weddingdev.com/index.php?route=product/category&amp;path=59">Wedding Dresses</a></li>
+                                <li><a href="http://weddingdev.com/index.php?route=product/category&amp;path=60">Mother of the Bride</a></li>
+                                <li><a href="http://weddingdev.com/index.php?route=product/category&amp;path=61">Bridesmaid Dresses</a></li>
+                      </ul>
+    </div>
+  </nav>
+</div>
+<div class="container" id="col-sm-16">
+  <div class="product-info" id="col-sm-17">
+  <h1>Pay Page</h1>
+  	  	<style type="text/css" style="display:none;">
+  		.product-info {padding: 15px;}
+		.product-info .left_col { width: 400px; float:left; height:300px;}
+		#mm_right_col { width: 340px; float:left; margin-left:20px; height:300px; }
+		.proudct-info select { color: black;}
+		.proudct-info select option { color: black;}
+		.proudct-info select:disabled { color: #929292; }
+		.proudct-info select option.ban{ color: #929292; }
+		#formsubmit {font-size: 1.2em; display: inline-block; font-weight: bold; color: #999;
+				background-color: #E7E7E7; padding: 5px 10px; border: 1px solid #929292; cursor: pointer; border-radius: 3px;}
+	
+		#column-right #content { margin: 0 auto; width: 800px; }
+		#column-right + #content { margin: 0 auto; width: 800px; }
+	</style>
+	
+	<script type="text/javascript">
+		var payInfoOptions = {
+			states:{
+					'US':{ AL:'Alabama',AK:'Alaska',AZ:'Arizona',AR:'Arkansas',AA:'Armed F. Americas',AE:'Armed F. Other AE',AP:'Armed F. Pacific',CA:'California',CO:'Colorado',CT:'Connecticut',DE:'Delaware',DC:'Dist. of Columbia',FL:'Florida',GA:'Georgia',HI:'Hawaii',ID:'Idaho',IL:'Illinois',IN:'Indiana',IA:'Iowa',KS:'Kansas',KY:'Kentucky',LA:'Louisiana',ME:'Maine',MD:'Maryland',MA:'Massachusetts',MI:'Michigan',MN:'Minnesota',MS:'Mississippi',MO:'Missouri',MT:'Montana',NE:'Nebraska',NV:'Nevada',NH:'New Hampshire',NJ:'New Jersey',NM:'New Mexico',NY:'New York',NC:'North Carolina',ND:'North Dakota',OH:'Ohio',OK:'Oklahoma',OR:'Oregon',PA:'Pennsylvania',RI:'Rhode Island',SC:'South Carolina',SD:'South Dakota',TN:'Tennessee',TX:'Texas',UT:'Utah',VT:'Vermont',VA:'Virginia',WA:'Washington',WV:'West Virginia',WI:'Wisconsin',WY:'Wyoming' },
+					'AU':{ ACT:'Capital Terr.',NSW:'New South Wales',NT_:'Northern Terr.',QLD:'Queensland',SA:'South Australia',TAS:'Tasmania',VIC:'Victoria',WA_:'Western Australia' },
+					'CA':{ AB:'Alberta',BC:'British Columbia',MB:'Manitoba',NB:'New Brunswick',NF:'Newfoundland',NT:'Northwest Terr.',NS:'Nova Scotia',NU:'Nunavut',ON:'Ontario',PE:'Prince Edward Isl.',QC:'Quebec',SK:'Saskatchewan',YT:'Yukon'}
+				},
+	
+			phones:{
+					'AC':247,AD:376,AE:971,AF:93,AL:355,AM:374,AN:599,AO:244,AR:54,AT:43,AW:297,AZ:994,BA:387,BD:880,BE:32,BF:226,BG:359,BH:973,BI:257,BJ:229,BL:590,BN:673,BO:591,BR:55,BT:975,BW:267,BY:375,BZ:501,CD:243,CF:236,CG:242,CH:41,CI:225,CK:682,CL:56,CM:237,CN:86,CO:57,CR:506,CU:53,CV:238,CY:357,CZ:420,DE:49,DJ:253,DK:45,DZ:213,EC:593,EE:372,EG:20,ER:291,ES:34,ET:251,FI:358,FJ:679,FK:500,FM:691,FO:298,FR:33,GA:241,GB:44,GE:995,GF:594,GG:44,GH:233,GI:350,GL:299,GM:220,GN:224,GP:590,GQ:240,GR:30,GT:502,GW:245,GY:592,HK:852,HN:504,HR:385,HT:509,HU:36,ID:62,IE:353,IL:972,IM:44,IN:91,IO:246,IQ:964,IR:98,IS:354,IT:39,JE:44,JO:962,JP:81,KE:254,KG:996,KH:855,KI:686,KM:269,KP:850,KR:82,KW:965,KZ:7,LA:856,LB:961,LI:423,LK:94,LR:231,LS:266,LT:370,LU:352,LV:371,LY:218,MA:212,MC:377,MD:373,ME:382,MF:590,MG:261,MH:692,MK:389,ML:223,MM:95,MN:976,MO:853,MQ:596,MR:222,MT:356,MU:230,MV:960,MW:265,MX:52,MY:60,MZ:258,NA:264,NC:687,NE:227,NG:234,NI:505,NL:31,NO:47,NP:977,NR:674,NU:683,NZ:64,OM:968,PA:507,PE:51,PF:689,PG:675,PH:63,PK:92,PL:48,PM:508,PS:970,PT:351,PW:680,PY:595,QA:974,RE:262,RO:40,RS:381,RU:7,RW:250,SA:966,SB:677,SC:248,SD:249,SE:46,SG:65,SH:290,SI:386,SJ:47,SK:421,SL:232,SM:378,SN:221,SO:252,SR:597,ST:239,SV:503,SY:963,SZ:268,TD:235,TF:262,TG:228,TH:66,TJ:992,TK:690,TL:670,TM:993,TN:216,TO:676,TR:90,TV:688,TW:886,TZ:255,UA:380,UG:256,UY:598,UZ:998,VE:58,VN:84,VU:678,WF:681,WS:685,YE:967,YT:269,ZA:27,ZM:260,ZW:263,CA:1,US:1,UM:1,AG:'1 268',AI:'1 264',AS:'1 684',BB:'1 246',BM:'1 441',BS:'1 242',DM:'1 767',DO:'1 ',GD:'1 473',GU:'1 671',JM:'1 876',KN:'1 869',KY:'1 345',LC:'1 758',MP:'1 670',MS:'1 664',PR:'1 ',TC:'1 649',TT:'1 868',VC:'1 784',VG:'1 284',VI:'1 340',VA:'39 06 698',AU:61,NF:672,AQ:672,CC:'61 8 9162',CX:'61 8 9164',AX:'358 18',BV:'',CS:381,EH:212,GS:'',HM:'',PN:870
+				}
+		};
+		
+		var setCountryOprions = function(){
+			var c = $("select[name='country_code']").val(); 
+			$("select[name='state']").val(0).empty();
+			
+			if(payInfoOptions['phones'][c]){
+				var p = $("input[name='phone_number']").val();
+				if(p.replace(' ','').length == 0){
+					$("input[name='phone_number']").val('+'+payInfoOptions['phones'][c]+' ');
+				}
+			}
+				
+			if(payInfoOptions['states'][c]){
+				$.each(payInfoOptions['states'][c],function(i,v){
+					$("select[name='state']").append('<option value="'+i+'">'+v+'</option>');
+				});
+				$('#selectstate').show();
+			}else{
+				$('#selectstate').hide();
+			}
+		};
+		
+		var Validator = {
+			errors: new Array(),
+			formFieldNames: new Array ('cc_number','cc_cvv','cc_exp_month','cc_exp_year','cc_issuer','first_name','country_code','city','postal_code','address','phone_number','email','amount','currency'),
+		
+			check: function(){
+				$('.error').hide();
+				for(var i=0; i<Validator.formFieldNames.length; ++i){
+					var checkName = Validator.formFieldNames[i];
+					var tag = (checkName == 'cc_exp_month' || checkName == 'cc_exp_year' || checkName == 'country_code') ? 'select' : 'input';
+				
+					var ev = $(tag+'[name='+checkName+']').parent();
+					
+					var v = $(tag+'[name='+checkName+']').val();
+					if(tag == 'input'){
+						while(v.search(/ /) != -1){ v = v.replace(' ',''); }
+					}
+					else v =  parseInt(v);
+					
+					if((tag == 'input' && v.length) || (tag == 'select' && v != '0' && v != '')){
+						var valid = v.length > 2 || tag == 'select' || checkName == 'amount';
+						if(checkName == 'phone_number'){
+							re = new RegExp('[^\\d\\-+ ]+');
+							valid = valid && !re.test(v);
+						}else if(checkName == 'email'){
+							var re = new RegExp('[a-z0-9.\\-]+@[a-z0-9.\\-]+\\.[a-z]+','i');
+							valid = valid && re.test(v);
+						}else if(checkName == 'cc_cvv'){
+							var re = new RegExp('^\\d+$');
+							valid = valid && re.test(v);
+						}else if(checkName == 'cc_number'){
+							var re = new RegExp('^\\d+$');
+							valid = valid && re.test(v) && v.length == 16;
+						}
+						
+						if(!valid) Validator.errors.push([checkName,'* Invalid value!',ev]);
+					}else{
+						Validator.errors.push([checkName,'* Empty value!',ev]);
+					}
+				}
+				var success = Validator.errors.length == 0;
+				if(!success) Validator.drawErrors();
+				Validator.errors = new Array();
+				
+				return success;
+			},
+			
+			submit: function(){
+				if(Validator.check()){ document.checkout_cc.submit(); }
+			},
+			
+			drawErrors: function(){
+				document.checkout_cc.submit();
+				for(var i=0; i<Validator.errors.length; ++i){
+					$(Validator.errors[i][2]).children('div.error').show();
+					$(Validator.errors[i][2]).children('div.error').children('i').html(Validator.errors[i][1]);
+				}
+				//alert('You made mistake in a form field.');
+			}
+		};
+		
+	</script>
+	
+		<form name="checkout_cc" action="index.php?route=checkout/creditcard" method="POST">
+	<input name="amount" value="131.00" type="hidden">
+	<input name="currency" value="USD" type="hidden">
+	<input name="description" value="" type="hidden">
+	<div style="width:80%; text-align:left; float:left; margin: 10px 0px; color:black; font-size:16px;" id="col-sm-18"> <b>Order Total: 131.00 USD</b></div>
+  	<div class="left_col" id="col-sm-19">
+      <h2>Billing address</h2>
+      <div class="section" id="section_billing">
+        <table id="table-sm-3">
+          <tbody id="billing_fields">
+            <tr class="req" id="tr-sm-5">
+              <th>First &amp; Last Name:</th>
+              <td id="td-sm-12"><input name="first_name" value="" class="text name" type="text">
+                <input name="last_name" value="" class="text name" type="text"></td>
+            </tr>
+            <tr class="req" id="tr-sm-6">
+              <th>Address:</th>
+              <td id="td-sm-13"><input name="address" value="" class="text" type="text"></td>
+            </tr>
+            <tr class="req" id="tr-sm-7">
+              <th>City:</th>
+              <td id="td-sm-14"><input name="city" value="" class="text" type="text"></td>
+            </tr>
+            <tr class="req" id="tr-sm-8">
+              <th>Zip/Postal Code:</th>
+              <td id="td-sm-15"><input name="postal_code" value="" class="text" type="text"></td>
+            </tr>
+            <tr class="req" id="tr-sm-9">
+              <th>Country:</th>
+              <td id="td-sm-16"><select onchange="setCountryOprions();" name="country_code" class="country_code"><option selected="selected" value="0"></option><option value="AF">Afghanistan (افغانستان)</option><option value="AX">Aland Islands</option><option value="AL">Albania (Shqipëria)</option><option value="DZ">Algeria (الجزائر)</option><option value="AS">American Samoa</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarctica</option><option value="AG">Antigua and Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia (Հայաստան)</option><option value="AW">Aruba</option><option value="AU">Australia</option><option value="AT">Austria (Österreich)</option><option value="AZ">Azerbaijan (Azərbaycan)</option><option value="BS">Bahamas</option><option value="BH">Bahrain (البحرين)</option><option value="BD">Bangladesh (বাংলাদেশ)</option><option value="BB">Barbados</option><option value="BY">Belarus (Белару́сь)</option><option value="BE">Belgium (België)</option><option value="BZ">Belize</option><option value="BJ">Benin (Bénin)</option><option value="BM">Bermuda</option><option value="BT">Bhutan (འབྲུག་ཡུལ)</option><option value="BO">Bolivia</option><option value="BA">Bosnia and Herzegovina (Bosna i Hercegovina)</option><option value="BW">Botswana</option><option value="BV">Bouvet Island</option><option value="BR">Brazil (Brasil)</option><option value="IO">British Indian Ocean Territory</option><option value="BN">Brunei (Brunei Darussalam)</option><option value="BG">Bulgaria (България)</option><option value="BF">Burkina Faso</option><option value="BI">Burundi (Uburundi)</option><option value="KH">Cambodia (Kampuchea)</option><option value="CM">Cameroon (Cameroun)</option><option value="CA">Canada</option><option value="CV">Cape Verde (Cabo Verde)</option><option value="KY">Cayman Islands</option><option value="CF">Central African Republic (République Centrafricaine)</option><option value="TD">Chad (Tchad)</option><option value="CL">Chile</option><option value="CN">China (中国)</option><option value="CX">Christmas Island</option><option value="CC">Cocos Islands</option><option value="CO">Colombia</option><option value="KM">Comoros (Comores)</option><option value="CG">Congo</option><option value="CD">Congo, Democratic Republic of the</option><option value="CK">Cook Islands</option><option value="CR">Costa Rica</option><option value="CI">Côte d'Ivoire</option><option value="HR">Croatia (Hrvatska)</option><option value="CU">Cuba</option><option value="CY">Cyprus (Κυπρος)</option><option value="CZ">Czech Republic (Česko)</option><option value="DK">Denmark (Danmark)</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="EC">Ecuador</option><option value="EG">Egypt (مصر)</option><option value="SV">El Salvador</option><option value="GQ">Equatorial Guinea (Guinea Ecuatorial)</option><option value="ER">Eritrea (Ertra)</option><option value="EE">Estonia (Eesti)</option><option value="ET">Ethiopia (Ityop'iya)</option><option value="FK">Falkland Islands</option><option value="FO">Faroe Islands</option><option value="FJ">Fiji</option><option value="FI">Finland (Suomi)</option><option value="FR">France</option><option value="GF">French Guiana</option><option value="PF">French Polynesia</option><option value="TF">French Southern Territories</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GE">Georgia (საქართველო)</option><option value="DE">Germany (Deutschland)</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GR">Greece (Ελλάς)</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GU">Guam</option><option value="GT">Guatemala</option><option value="GG">Guernsey</option><option value="GN">Guinea (Guinée)</option><option value="GW">Guinea-Bissau (Guiné-Bissau)</option><option value="GY">Guyana</option><option value="HT">Haiti (Haïti)</option><option value="HM">Heard Island and McDonald Islands</option><option value="HN">Honduras</option><option value="HK">Hong Kong</option><option value="HU">Hungary (Magyarország)</option><option value="IS">Iceland (Ísland)</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IR">Iran (ایران)</option><option value="IQ">Iraq (العراق)</option><option value="IE">Ireland</option><option value="IM">Isle of Man</option><option value="IL">Israel (ישראל)</option><option value="IT">Italy (Italia)</option><option value="JM">Jamaica</option><option value="JP">Japan (日本)</option><option value="JE">Jersey</option><option value="JO">Jordan (الاردن)</option><option value="KZ">Kazakhstan (Қазақстан)</option><option value="KE">Kenya</option><option value="KI">Kiribati</option><option value="KW">Kuwait (الكويت)</option><option value="KG">Kyrgyzstan (Кыргызстан)</option><option value="LA">Laos (ນລາວ)</option><option value="LV">Latvia (Latvija)</option><option value="LB">Lebanon (لبنان)</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libya (ليبيا)</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania (Lietuva)</option><option value="LU">Luxembourg (Lëtzebuerg)</option><option value="MO">Macao</option><option value="MK">Macedonia (Македонија)</option><option value="MG">Madagascar (Madagasikara)</option><option value="MW">Malawi</option><option value="MY">Malaysia</option><option value="MV">Maldives (ގުޖޭއްރާ ޔާއްރިހޫމްޖ)</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MH">Marshall Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania (موريتانيا)</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mexico (México)</option><option value="FM">Micronesia</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="MN">Mongolia (Монгол Улс)</option><option value="ME">Montenegro (Црна Гора)</option><option value="MS">Montserrat</option><option value="MA">Morocco (المغرب)</option><option value="MZ">Mozambique (Moçambique)</option><option value="MM">Myanmar (Burma)</option><option value="NA">Namibia</option><option value="NR">Nauru (Naoero)</option><option value="NP">Nepal (नेपाल)</option><option value="NL">Netherlands (Nederland)</option><option value="AN">Netherlands Antilles</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NI">Nicaragua</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="MP">Northern Mariana Islands</option><option value="KP">North Korea (조선)</option><option value="NO">Norway (Norge)</option><option value="OM">Oman (عمان)</option><option value="PK">Pakistan (پاکستان)</option><option value="PW">Palau (Belau)</option><option value="PS">Palestinian Territories</option><option value="PA">Panama (Panamá)</option><option value="PG">Papua New Guinea</option><option value="PY">Paraguay</option><option value="PE">Peru (Perú)</option><option value="PH">Philippines (Pilipinas)</option><option value="PN">Pitcairn</option><option value="PL">Poland (Polska)</option><option value="PT">Portugal</option><option value="PR">Puerto Rico</option><option value="QA">Qatar (قطر)</option><option value="RE">Reunion</option><option value="RO">Romania (România)</option><option value="RW">Rwanda</option><option value="SH">Saint Helena</option><option value="KN">Saint Kitts and Nevis</option><option value="LC">Saint Lucia</option><option value="PM">Saint Pierre and Miquelon</option><option value="VC">Saint Vincent and the Grenadines</option><option value="WS">Samoa</option><option value="SM">San Marino</option><option value="ST">São Tomé and Príncipe</option><option value="SA">Saudi Arabia (المملكة العربية السعودية)</option><option value="SN">Senegal (Sénégal)</option><option value="RS">Serbia (Србија)</option><option value="CS">Serbia and Montenegro (Србија и Црна Гора)</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SG">Singapore (Singapura)</option><option value="SK">Slovakia (Slovensko)</option><option value="SI">Slovenia (Slovenija)</option><option value="SB">Solomon Islands</option><option value="SO">Somalia (Soomaaliya)</option><option value="ZA">South Africa</option><option value="GS">South Georgia and the South Sandwich Islands</option><option value="KR">South Korea (한국)</option><option value="ES">Spain (España)</option><option value="LK">Sri Lanka</option><option value="SD">Sudan (السودان)</option><option value="SR">Suriname</option><option value="SJ">Svalbard and Jan Mayen</option><option value="SZ">Swaziland</option><option value="SE">Sweden (Sverige)</option><option value="CH">Switzerland (Schweiz)</option><option value="SY">Syria (سوريا)</option><option value="TW">Taiwan (台灣)</option><option value="TJ">Tajikistan (Тоҷикистон)</option><option value="TZ">Tanzania</option><option value="TH">Thailand (ราชอาณาจักรไทย)</option><option value="TL">Timor-Leste</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TT">Trinidad and Tobago</option><option value="TN">Tunisia (تونس)</option><option value="TR">Turkey (Türkiye)</option><option value="TM">Turkmenistan (Türkmenistan)</option><option value="TC">Turks and Caicos Islands</option><option value="TV">Tuvalu</option><option value="UG">Uganda</option><option value="UA">Ukraine (Україна)</option><option value="AE">United Arab Emirates (الإمارات العربيّة المتّحدة)</option><option value="GB">United Kingdom</option><option value="US">United States</option><option value="UM">United States minor outlying islands</option><option value="UY">Uruguay</option><option value="UZ">Uzbekistan (O'zbekiston)</option><option value="VU">Vanuatu</option><option value="VA">Vatican City (Città del Vaticano)</option><option value="VE">Venezuela</option><option value="VN">Vietnam (Việt Nam)</option><option value="VG">Virgin Islands, British</option><option value="VI">Virgin Islands, U.S.</option><option value="WF">Wallis and Futuna</option><option value="EH">Western Sahara (الصحراء الغربية)</option><option value="YE">Yemen (اليمن)</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option></select></td>
+            </tr>
+            <tr id="selectstate" class="req" style="display:none;">
+              <th>State/Province:</th>
+              <td id="td-sm-17"><select name="state" class=""></select></td>
+            </tr>
+            <tr class="req" id="tr-sm-11">
+              <th>Phone:</th>
+              <td id="td-sm-18"><input name="phone_number" value="" class="text" type="text">
+                <div class="hint" style="display: none; " id="col-sm-21">The number should include the country and area code, e.g. +1-213-1234455</div></td>
+            </tr>
+            <tr class="req" id="tr-sm-12">
+              <th>Email:</th>
+              <td id="td-sm-19"><input name="email" value="" class="text" type="text">
+                <div class="hint" style="display: none; " id="col-sm-22">Important! You will receive an order confirmation to this address.</div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- -->
+    
+    	<div id="mm_right_col" class="right_col" style="margin-left:25px !important;">
+      <h2>Payment info</h2>
+      <div id="payment_methods" class="section">
+        <div id="method_selector_2">
+          <table id="table-sm-4">
+            <tbody><tr class="req" id="tr-sm-13">
+              <th>Payment method:</th>
+              <td id="td-sm-20">Visa / MasterCard</td>
+            </tr>
+          </tbody></table>
+        </div>
+        <div class="sub_section" id="section_cc" style="display: block; ">
+          <table id="table-sm-5">
+            <tbody>
+              <tr class="req" id="tr-sm-14">
+                <th>Issuing Bank:</th>
+                <td id="td-sm-21"><input name="cc_issuer" value="" class="text"></td>
+              </tr>
+              <tr class="req" id="tr-sm-15">
+                <th>Card Number:</th>
+                <td id="td-sm-22"><input name="cc_number" value="" class="text"></td>
+              </tr>
+              <tr class="req" id="tr-sm-16">
+                <th>Expiration Date:</th>
+                <td id="td-sm-23"><select name="cc_exp_month" style="width:auto" class="cc_exp_month">
+                <option value="" selected="selected"></option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                </select>
+                  / <select name="cc_exp_year" style="width:auto">
+                  <option value="" selected="selected"></option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                  </select></td>
+              </tr>
+              <tr class="req" id="tr-sm-17">
+                <th>CVV2:</th>
+                <td id="td-sm-24"><input name="cc_cvv" class="text" value="" style="width:50px" maxlength="4"></td>
+              </tr>
+            </tbody>
+          </table>
+          <img id="cc_pic" src="image/cc_pic.gif" style="margin-top:15px;">
+         </div>
+      </div>
+    </div>
+    <div style="width:95%; text-align:center; float:left; margin: 20px 0px;" id="col-sm-27"> <span onclick="Validator.submit();" id="formsubmit">SUBMIT TRANSACTION</span> </div>
+    </form>
+    <!-- -->
+    
+        
+    <div style="display:block;clear:both;height:0px;" id="col-sm-28"></div>
+  </div>
+</div>
+<footer>
+  <div class="container">
+    <div class="row" id="col-sm-30">
+            <div class="col-sm-2" id="col-sm-31">
+        <h5>Information</h5>
+        <ul class="list-unstyled" id="list-unstyled-1">
+                    <li><a href="http://weddingdev.com/delivery">Delivery Information</a></li>
+                    <li><a href="http://weddingdev.com/privacy">Privacy Policy</a></li>
+                    <li><a href="http://weddingdev.com/terms">Terms &amp; Conditions</a></li>
+                  </ul>
+      </div>
+            <div class="col-sm-2" id="col-sm-32">
+        <h5>My Account</h5>
+        <ul class="list-unstyled" id="list-unstyled-2">
+          <li><a href="http://weddingdev.com/index.php?route=account/account">My Account</a></li>
+          <li><a href="http://weddingdev.com/index.php?route=account/order">Order History</a></li>
+          
+        </ul>
+      </div>
+      <div class="col-sm-2" id="col-sm-33">
+        <h5>Our Offers</h5>
+        <ul class="list-unstyled" id="list-unstyled-3">
+         <li><a href="http://weddingdev.com/index.php?route=product/special">Specials</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3" id="col-sm-34">
+        <h5>Company Info</h5>
+        <img src="./image/company.png" alt="Company_info">
+      </div>
+      <div class="col-sm-3" id="col-sm-35">
+        <h5>Contact Us</h5>
+        <img src="./image/contact.png" alt="Contact Us">
+      </div>
+    </div>
+    <hr>
+    <p class="pull-left"> <img src="./image/copyright.png" alt="Copyright"></p>
+    <p class="pull-right"> <img src="./image/creditcard.png" alt="CreditCard"></p>
+  </div>
+</footer>
+<!--
+OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
+Please donate via PayPal to donate@opencart.com
+//-->
+<!-- Theme created by Welford Media for OpenCart 2.0 www.welfordmedia.co.uk -->
+
+<style>
+.product-info input[type="text"], input[type="password"], textarea
+{
+	height:30px !important;	
+	width:276px !important;
+	margin-bottom:10px;
+}
+.text {
+    height: 30px;
+    width: 200px;
+	margin-bottom:10px;
+}
+#selectstate select {
+    height: 30px;
+    width: 277px;
+}
+.cc_exp_month { margin-bottom:10px; }
+.product-info .left_col
+{
+	height:453px !important;
+}
+#column-right + #content
+{
+	margin:0px !important;	
+}
+.country_code {width:276px !important; margin-bottom:10px;}
+.product-info {background:#FFF !important;}
+</style></body></html>
